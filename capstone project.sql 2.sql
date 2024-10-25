@@ -1,10 +1,11 @@
 SELECT * FROM capstone_project.cryptopunkdata;
 use capstone_project.cryptopunkdata;
 
-1)How many sales occurred during this time period? 
+1)How many sales occurred during 2023 Time period? 
+SELECT COUNT(transaction_hash)
+FROM capstone_project.cryptopunkdata
+WHERE year = 2023;
 
-SELECT COUNT(DISTINCT transaction_hash)
-FROM capstone_project.cryptopunkdata;
 
 2) Return the top 5 most expensive transactions (by USD price) for this data set. Return the name, ETH price, and USD price, as well as the date.
 SELECT name, ETH_price, USD_price, day, transaction_hash
